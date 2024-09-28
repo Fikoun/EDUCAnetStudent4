@@ -1,6 +1,6 @@
 <?php
 /****---------------------****/
-/***     TAHÁK (v1.3.1)    ***/
+/***     TAHÁK (v1.3.2)    ***/
 /**-------------------------**/
 /**                         
  *  Základní tahákový mustr, takových najdete na internetu mnoho.

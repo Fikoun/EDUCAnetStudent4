@@ -3,6 +3,7 @@
  *   CVIČENÍ - Pokročilé cykly
  *      ~ pokročilé cykly, dvojitý for() a práce s polem  
  *      ~ cvičení obsahuje 2 zadání a 3 příklady k opravení
+ *      ~ chcete-li získat známku navíc před prvním testem vyplňte a odešlete do konce praxí
  * 
  *  Nějaké typy navíc:
  *   Přečti si vždy celý kód zadání a zkus se zasmyslet co se bude dít. 
@@ -80,12 +81,12 @@ echo $nejvetsi;
 
 
 ///     #2 ~ Zobrazení trojúhelníku      ///
+// Chceme troj-úhelník obrácený špičkou DOLŮ !!!
 # # # #
 # # #
 # #
 #
-// Chceme troj-úhelník obrácený špičkou DOLŮ !!!
-// Příklad z cheatsheet souboru..:
+// Příklad z cheatsheet souboru.:
 $znakPixelu = '#';
 $vyska = 5;
 for ($radky = 0; $radky < $vyska; $radky++) {
@@ -103,7 +104,7 @@ for ($radky = 0; $radky < $vyska; $radky++) {
 
 ///     #3 ~ Najdi spolužáka      ///
 // Tento kód hledá spolužáka v poli polí na základě kritérií
-// Všimněte si že pole obsahuje jednotlivé žáky jako "entity" zapsané v ASSOC poli
+// Všimněte si že vnější pole obsahuje jednotlivé žáky jako "entity" zapsané v ASSOC poli
 $spoluzaci = [
     [ 
         'jmeno' => "Jan Doležal",
@@ -128,9 +129,11 @@ $spoluzaci = [
 ];
 function hledatSpoluzaka($pohlavi, $prumernaZnamka) {
     // POZOR! ~ proměnnou zvenku funkce nelze používat
-    // MÁME DVĚ MOŽNOSTI:
-    //  (A) poslat proměnnou do funkce jako argument ($pohlavi, $prumernaZnamka, $spoluzaci)
-    //  (B) Použít slovíčko 'global', které zprřístupní venkovní proměnnou
+    // MÁME TŘI MOŽNOSTI:
+    //      (A) Přesunout definici $spoluzaci do funkce
+    //      (B) Poslat proměnnou do funkce jako argument hledatSpoluzaka($spoluzaci, $pohlavi, $prumernaZnamka)
+    //      (C) Použít slovíčko 'global', které zpřístupní venkovní proměnnou
+    //+ tomuto se říká Scope neboli Rámec ve kterém se hodnota nachází (zvenku, zfunkce, z objektu)
     global $spoluzaci;
 
     foreach ($spoluzaci as $zak) { 
