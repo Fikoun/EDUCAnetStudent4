@@ -1,6 +1,6 @@
 <?php
 /****---------------------****/
-/***     TAHÁK (v1.3.2)    ***/
+/***     TAHÁK (v1.3.4)    ***/
 /**-------------------------**/
 /**                         
  *  Základní tahákový mustr, takových najdete na internetu mnoho.
@@ -29,7 +29,7 @@ $jeStudent = true; //  true || false
 
 //+ NULLová hodnota (alias "nic")
 $prazdna_hodnota = null;
-$prazdna_hodnota; // vytvoží prázdnou proměnnou
+$prazdna_hodnota; // vytvoří prázdnou proměnnou
 
 // Číselné hodnoty [ INT, FLOAT ]
 $vek = 24;
@@ -41,7 +41,7 @@ $string = "Ahoj jak se máš";
 
 // Pole jako seznam věcí (Array)
 $zaci = [6, 5, 9, 1, 3];
-$zaci = [123, "neco", false, pi(), $cele];
+$zaci = [123, "neco", false, pi(), $vek];
 
 //+ Konstanta - nezměnitelná hodnota bez dolaru $
 define('HESLO_DO_DATABAZE', "123456789");
@@ -59,7 +59,8 @@ $zbytek = 13 % 5; // znak modulo -> zbytek po deleni
 $v = 3 + 6 - ($cislo * 3) / $desetine;
 $v = pow($zaklad, $mocnina); //+ Mocnina
 $squareRoot = sqrt($zaklad); //+ Druhá odmocnina
-// Zaokrouhlujeme round(), zaokr. nahoru ceil() a dolu floor()
+//+ Zaokrouhlujeme round(), zaokr. nahoru ceil() a dolu floor()
+
 // Modifikace proměnné [ +=  -=  /=  *= ]
 $desetine += 10.2; // přičte a uloží
 $desetine /= 2; // vydělí a uloží
@@ -69,6 +70,7 @@ $desetine++; $desetine--; // Přídá / Odebere pouze jedničku
 $jmeno = "Pavle"; // Uvozovky dvojího typu ( " / ' )
 $jmeno = 'Pavle';
 $pozdrav = "Hello" . "World" . "<br>"; // Skládání tečkou (A . B)
+
 // Skládání s proměnou
 $pozdrav = "Ahoj, jak se máš " . $jmeno;
 //+ Vložená proměnná (! pozor funguje pouze u dvojtých uvozovek)
@@ -91,6 +93,7 @@ $pravda = true;
 $nepravda = false;
 $and = $pravda && $nepravda; // OBA musí být pravdou
 $or = $pravda || $nepravda; // ALESPON JEDEN musí být pravdou
+
 // Také můžeme skládat pomocí závorek ()
 $maPropustku = false;
 $slozene = ($pass == "heslo" && $vek >= 21) || $maPropustku;
@@ -136,13 +139,13 @@ function funkceBankomatu($pin, $kolikVybyrame)
 
     return null; // Nevybral nic
 }
-// Pak poomocí jména můžeme volat kolikrát chceme
+// Pak pomocí jména můžeme volat kolikrát chceme
 funkceBankomatu("333", 500);
 funkceBankomatu("768", 20);
 funkceBankomatu("789", 100);
 funkceBankomatu("123", 5);
 
-// Nekdy funkce nemusí mít argumenty..
+// Někdy funkce nemusí mít argumenty..
 $ciselnyCas = time(); //+ time() vrací pouze aktuální čas jako jedno číslo.. nic víc
 
 
@@ -205,7 +208,7 @@ for ($radky = 0; $radky < $vyska; $radky++) {
 $cisla = [3, 7, 9, 1, 10];
 $jmena = ["Pepa", "Anna", "Greq"];
 
-// Vloží nový prvek
+// Vloží nový prvek na konec!
 $jmena[] = "Honza"; // ["Pepa", "Anna", "Greq", "Honza"]
 
 // Ke konkrétnímu prvku pole přistoupíme takto
@@ -227,7 +230,7 @@ for ($index = 0; $index < $pocet; $index++) {
 }
 
 
-///     JAK SECIST POLE      ///
+///     JAK SEČÍST POLE      ///
 $pocetCisel = count($cisla);
 $celkem = 0; // zacneme na nule a budeme přičítat
 for ($i = 0; $i < $pocetCisel; $i++) {
@@ -248,12 +251,13 @@ foreach ($jmena as $konkretniJmeno) {
 }
 
 
-///     JAK SECIST POLE      ///
+///     JAK SEČÍST POLE      ///
 // Oproti kódu for() je jednodužší (viz. víše)
 $celkem = 0;
 foreach ($jmena as $prvek) {
     $celkem += $prvek;
 }
+
 
 /////////////
 //  ASSOC  //
