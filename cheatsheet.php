@@ -1,6 +1,6 @@
 <?php
 /****---------------------****/
-/***     TAHÁK (v1.3.4)    ***/
+/***     TAHÁK (v1.3.5)    ***/
 /**-------------------------**/
 /**                         
  *  Základní tahákový mustr, takových najdete na internetu mnoho.
@@ -59,8 +59,7 @@ $zbytek = 13 % 5; // znak modulo -> zbytek po deleni
 $v = 3 + 6 - ($cislo * 3) / $desetine;
 $v = pow($zaklad, $mocnina); //+ Mocnina
 $squareRoot = sqrt($zaklad); //+ Druhá odmocnina
-//+ Zaokrouhlujeme round(), zaokr. nahoru ceil() a dolu floor()
-
+// Zaokrouhlujeme round(), zaokr. nahoru ceil() a dolu floor()
 // Modifikace proměnné [ +=  -=  /=  *= ]
 $desetine += 10.2; // přičte a uloží
 $desetine /= 2; // vydělí a uloží
@@ -70,7 +69,6 @@ $desetine++; $desetine--; // Přídá / Odebere pouze jedničku
 $jmeno = "Pavle"; // Uvozovky dvojího typu ( " / ' )
 $jmeno = 'Pavle';
 $pozdrav = "Hello" . "World" . "<br>"; // Skládání tečkou (A . B)
-
 // Skládání s proměnou
 $pozdrav = "Ahoj, jak se máš " . $jmeno;
 //+ Vložená proměnná (! pozor funguje pouze u dvojtých uvozovek)
@@ -93,7 +91,6 @@ $pravda = true;
 $nepravda = false;
 $and = $pravda && $nepravda; // OBA musí být pravdou
 $or = $pravda || $nepravda; // ALESPON JEDEN musí být pravdou
-
 // Také můžeme skládat pomocí závorek ()
 $maPropustku = false;
 $slozene = ($pass == "heslo" && $vek >= 21) || $maPropustku;
@@ -258,7 +255,6 @@ foreach ($jmena as $prvek) {
     $celkem += $prvek;
 }
 
-
 /////////////
 //  ASSOC  //
 /////////////
@@ -307,21 +303,22 @@ $pole_2d = [
 // 2D jako v matematice [x, y]
 $pole_2d[2][1] = 'x'; // nastavime na pozici [2, 1] 
 
-// NAPŘÍKLAD - databáze knih
+
+// ASSOC pole v poly - Např.: Databáze knih
 $kniha1 = [
-    "id"=> 1,
-    "jmeno"=> "Romeo a Julie",
-    "stranek"=> 210,
+    "id" => 1,
+    "jmeno" => "Romeo a Julie",
+    "stranek" => 210,
 ];
 $kniha1 = [
-    "id"=> 2,
-    "jmeno"=> "Pán prstenů",
-    "stranek"=> 323,
+    "id" => 2,
+    "jmeno" => "Pán prstenů",
+    "stranek" => 323,
 ];
 $kniha3 = [
-    "id"=> 3,
-    "jmeno"=> "Krakatit",
-    "stranek"=> 190,
+    "id" => 3,
+    "jmeno" => "Krakatit",
+    "stranek" => 190,
 ];
 
 $knihovna = [$kniha1, $kniha2, $kniha3];
@@ -333,5 +330,5 @@ $knihovna[2]["stranek"] = 200; // Nastavim prvek v prvku
 
 
 /////////////////////////////////////////////////////////////
-/* SUPER dostal ses az na konec, takže ready na procvičnou */
+/* Funkce za domácí úkol na samostudium */
 /////////////////////////////////////////////////////////////
