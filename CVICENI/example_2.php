@@ -1,6 +1,6 @@
 <?php
 /**                         
- *   CVIČENÍ - Pokročilé cykly
+ *   CVIČENÍ [2] - Pokročilé cykly
  *      ~ pokročilé cykly, dvojitý for() a práce s polem  
  *      ~ cvičení obsahuje 2 zadání a 3 příklady k opravení
  *      ~ chcete-li získat známku navíc před prvním testem vyplňte a odešlete do konce praxí
