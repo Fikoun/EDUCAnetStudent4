@@ -9,44 +9,35 @@
 /// - Klíčové slovíčko "$this" je proměnná, která odkazuje na AKTUÁLNÍ objekt
 
 // Obecně platí pravidlo, že pojmenováváme třídy s velkým počátečním písmenem
-class Auto {
+class Film {
     // Vlastnosti
-    public $znacka;
-    public $barva;
-    public $pocetKol;
-    private $zapnuto = false; // private -> nepřístupný z venku 
-
+    public $nazev;
+    public $rok;
+    public $hodnoceni;
+   
     /// Konstruktor - zavolaný při vytvoření instance
-    function __construct($znacka, $barva, $pocetKol)
+    function __construct($nazev, $rok, $hodnoceni)
     {
         // Sestavujeme zde objekt z příchozích hodnot
-        $this->znacka = $znacka;
-        $this->barva = $barva;
-        $this->pocetKol = $pocetKol;
-        // Nebo jenom nastavíme pevné hodnoty
-        $this->zapnuto = false;
-    }
-
-    // Metody
-    public function zapnoutMotor() {
-        $this->zapnuto = true;
-    }
-    public function vypnoutMotor() {
-        $this->zapnuto = false;
+        $this->nazev = $nazev;
+        $this->rok = $rok;
+        $this->hodnoceni = $hodnoceni;
     }
 
     public function vypsatInfo() {
-        echo "<h2> ~ Auto ($this->znacka) ~ </h2>";
-        echo "Má barvu $this->barva <br>"; 
-        echo "Počet kol $this->pocetKol <br>";
-
-        echo "Motor je: <b>";
-        if ($this->zapnuto) {
-            echo "ZAPNUTÝ";
-        } else {
-            echo "VYPNUTÝ";
+        echo '<div style="display: inline-block; padding: 20px 30px; border-radius: 18px; border: 2px solid black; margin: 12px;">';
+        echo "<h2 style='text-shadow: 1px 1px 4px grey; '> ~ ($this->nazev) ~ </h2>";
+   
+        echo "Rok vydání $this->rok <br>";
+        
+        echo "Hodnoceni: ";
+        for ($i=0; $i < $this->hodnoceni; $i++) { 
+            echo "⭐️";
         }
+        
         echo "</b>";
+        echo "</div>";
+
     }
 
 }
