@@ -1,6 +1,6 @@
 <?php
-/// Cykly ///
-// Trénujte cykly: for, while, foreach a rekurzy
+/// Cykly a Pole ///
+// Trénujte cykly a pole: for, while, foreach a rekurzy
 // Pokud rekurzy neovládám dá se napsat cyklem, se sníženým ohodnocením.
 
 /// Ukázkové řešení: ///
@@ -52,3 +52,36 @@ echo "Faktorial čísla $vstup je: " . faktorialCyklem($vstup) . "<br>";
 // Nahraďte funkci explode pomocí vlastní funkce, která rozdělí řetězec na pole podle zadaného oddělovače.
 // Např.: "ahoj,jak,se,máš" -> ["ahoj", "jak", "se", "máš"]
 
+
+/// Příklad 5. ///
+// Vytvořte funkci, která vypíše malou násobilku pomocí.
+// Na každý řádek vypište násobení od 1 do 10 postupně inkrementujícím číslem.
+// Výstup bude tohoto formátu (body navíc za vypsání do HTMl tabulky):
+/*
+1 2 3 4 ... 10
+2 4 6 8 ... 
+3 6 9 12 ...
+4 8 12 16 ...
+...
+*/
+
+
+/// Příklad 6. ///
+// Program, bude brát číslo a vypisovat jeho dělitele
+// Algoritmus postupně projde čísla od 1 do N a pokud je dělitel, vypíše ho
+// Např.: Číslo 12 dělí čísla: 1, 2, 3, 4, 6, 12
+
+
+/// Příklad 7. ///
+// Vytvořte funkci, která najde nejmenší číslo v poli pomocí cyklu a to číslo odstraní.
+// Např.: [1, 2, 3, 4, 5] -> [2, 3, 4, 5]
+
+
+/// Příklad 8. ///
+// Vytvořte funkci, která velikost trojrozměrného vektoru.
+// Funkce bere vektor ve formě pole [x, y, z] a vrátí jeho délku.
+// Velikost vektoru je dána pythagorovým vzorcem:
+//   |(x, y, z)|  =  √(x^2 + y^2 + z^2)
+// *pro info: V matematice zápis pro vektor používá kulaté závorky namísto hranatých jako u polí
+
+// Výstup.: Velikost vektoru (3, 4, 5) je rovna 7.071

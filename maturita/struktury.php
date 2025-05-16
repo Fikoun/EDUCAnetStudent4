@@ -1,6 +1,7 @@
 <?php
 /// Strukturované programování (základní syntax) ///
-
+// Tato cvičení zahrnují algoritmizaci a strukturované programování.
+// Práce s posloupnoustí kódu, větvení, funkce a kontrolou vstupů.
 
 // Ukázkové řešení: //
 
@@ -101,3 +102,16 @@ if (!$isValid) {
 //  x1,2 = (-b ± √(b² - 4ac)) / 2a 
 //  x1 = (-b + √D) / 2a
 //  x2 = (-b - √D) / 2a
+
+
+
+/// PŘÍKLAD 6. ///
+// Vytvořte program, který bude zjišťovat slevu na jízdné podle věku a stavu studenta
+// Vstupní proměnné budou věk (int) a stav studenta (bool)
+// Podle následujících pravidel vypiš slevu:
+//    0-6 let = 100% sleva
+//    7-18 let = 50% sleva
+//    18-26 let a zároveň student = 25% sleva
+//    27-60 let = 0% sleva
+//    60+ let = 50% sleva
+// *validuj vstupy a pokud je věk menší než 0 nebo větší než 120, vypiš "Neplatný věk"

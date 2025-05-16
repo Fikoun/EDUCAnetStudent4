@@ -71,3 +71,69 @@ $mojeAuto->vypsatInfo();
 // Vytvořte třídu "Kalkulacka" se statickou metodou "secti", která sečte dvě čísla
 // Vytvořte statickou metodu "odecti", která odečte dvě čísla
 // Zavolejte obě metody bez vytváření instance třídy
+
+
+// Příklad 5. ///
+// Třída "Ukol" bude reprezentovat připomínku z úkolovníku, který umožní pracovat s daty a statusem.
+// Vlastnosti: datum vyřešení (DateTime), popis úkolu k připomenutí a status vyřešení.
+// Metody:
+// - kolikCasuZbyva() - vrátí počet dní do vyřešení úkolu
+// - vypisStatus() - vypíše "Vyřešeno" pokud odpovídá status, jinak vypíše kolik zbívá dní.
+// - vratDatumUdalosti() - vrátí datum konkrétní události
+// - nastavitDatum($den, $mesic, $rok) - nastaví datum události podle zadaných promených
+// - nastavitVyreseno() - nastaví status na true
+
+class Ukol {
+    // Vlastnosti a metody zde...
+}
+
+/// Příklad použití (aktuální datum např: 2025-01-01): ///
+$r1 = new Ukol("2025-01-06", "Zkouška z matematiky");
+$r2 = new Ukol("2025-01-29", "Posekat zahradu");
+$r3 = new Ukol("2025-01-20", "Sestavit plán výletu");
+    
+$r1->vypisStatus(); // -> "5 dní do vyřešení úkolu - Zkouška z matematiky"
+
+$r2->nastavitDatum(22, 1, 2025); // -> nastaví datum na 2025-01-22
+echo $r2->kolikCasuZbyva(); // -> 21
+$r2->vypisStatus(); // -> "Zbývá 21 dní do vyřešení úkolu - Posekat zahradu"
+$r2->nastavitVyreseno(); 
+$r2->vypisStatus(); // -> "Vyřešeno - Posekat zahradu"
+
+
+// Příklad 6. ~ navazující na Příklad 5. ///
+// Třída "Ukolovnik" bude reprezentovat úkolovník, který umožní spravovat více úkolů jako pole objektů.
+// Metody:
+// - pridatUkol($reminder) - přidá úkol (objekt Reminder) do úkolovníku
+// - odstranitUkol($index) - odstraní úkol podle indexu z pole
+// - vypsatUkoly($vyresene) - vypíše všechny úkoly, které jsou vyřešené (true) nebo nevyřešené (false) dle parametru
+
+class Ukolovnik {
+    // Vlastnosti a metody zde...
+}
+
+/// Příklad použití: ///
+$ukolovnik = new Ukolovnik();
+$ukolovnik->pridatUkol($r1);
+$ukolovnik->pridatUkol($r2);
+$ukolovnik->pridatUkol($r3);
+
+// Vypíše všechny úkoly
+$ukolovnik->vypsatUkoly(false);
+
+$r1->nastavitVyreseno();
+// Vypíše pouze vyřešené úkoly (tedy ukol 1)
+$ukolovnik->vypsatUkoly(true);
+
+$ukolovnik->odstranitUkol(1); // Odstraní druhý úkol (index 1)
+
+
+
+
+/// Příklad 7. ///
+// Příklad základní dědičnosti
+// Vytvořte třídu "Zamestnanec" s vlastnostmi "jméno", "příjmení" a "plat"
+// Vytvořte metodu "vypisInfo", která vypíše informace o zaměstnanci
+// Vytvořte třídu "Manazer", která dědí z třídy "Zamestnanec" a přidá navíc vlastnost "oddělení"
+// Vytvořte metodu "vypisInfo", která vypíše informace o manažerovi
+// Vytvořte instanci třídy "Manazer" a zavolejte metodu "vypisInfo"
